@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.title {
+  margin: auto;
+}
+.mat-divider {
+  border-top-color: rgb(161 155 155 / 12%);
+}
+
+.list-item-title{
+  color:#000;
+  font-weight: 500;
+
+}
+
+.list-item-format{
+  color:#5095eb;
+  font-size: 12px;
+}
+.c-blue{
+  color:#5095eb;
+}
+
+.c-gray{
+  color:#c0c2c4;
+}
+
+.pointer{
+  cursor: pointer;
+}
