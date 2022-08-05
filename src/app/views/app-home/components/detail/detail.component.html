@@ -1,0 +1,45 @@
+<mat-toolbar>
+  <button mat-icon-button class="c-blue" aria-label="Example icon-button with menu icon" routerLink=''>
+    <mat-icon>chevron_left</mat-icon> Indicadores
+  </button>
+  <span class="title">{{title}}</span>
+</mat-toolbar>
+<div class="container mt-5 ">
+  <div class="row mb-3">
+    <div class="col-12 text-center">
+      <span class="c-blue" style="font-size: 4rem;">{{currency}} {{value}}</span>
+    </div>
+  </div>
+  <div class="row ">
+    <div class="col-12 mb-1">
+      <div class="row">
+        <div class="col-6 p-2"><span class="item-result">Nombre</span> </div>
+        <div class="col-4 p-2 box-result">{{title}}</div>
+      </div>
+    </div>
+    <div class="col-12 mb-1">
+      <div class="row">
+        <div class="col-6 p-2"><span class="item-result">Fecha</span> </div>
+        <div class="col-4 p-2 box-result">{{date}}</div>
+      </div>
+    </div>
+    <div class="col-12 mb-1">
+      <div class="row">
+        <div class="col-6 p-2"><span class="item-result">Unidad Medida</span> </div>
+        <div class="col-4 p-2 box-result">{{format}}</div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12"> <canvas width="400" height="400" id="canvas">{{chart}}</canvas></div>
+  </div>
+</div>
+
+<div>
+
+</div>

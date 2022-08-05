@@ -1,0 +1,30 @@
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="title">Indicadores</span>
+</mat-toolbar>
+<mat-list role="list">
+  <ng-container *ngFor="let item of indicatorsList">
+    <mat-list-item role="listitem">
+      <div class="row" style="width:100%;">
+        <div class="col-6 ">
+          <div class="row">
+            <div class="col-12 text-left">
+              <span class="list-item-title pointer" (click)="setIndicator(item,'history')">{{item.name}}</span>
+            </div>
+            <div class="col-12">
+              <span class="list-item-format">{{item.format}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 justify-content-end d-flex align-items-center">
+          <mat-icon class="c-blue pointer" (click)="setIndicator(item,'detail')">info</mat-icon>
+          <mat-icon class="c-gray pointer" (click)="setIndicator(item,'detail')">chevron_right</mat-icon>
+        </div>
+      </div>
+    </mat-list-item>
+    <mat-divider role="separator">
+    </mat-divider>
+  </ng-container>
+</mat-list>

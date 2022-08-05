@@ -1,0 +1,22 @@
+<mat-toolbar>
+  <button mat-icon-button class="c-blue" aria-label="Example icon-button with menu icon" routerLink=''>
+    <mat-icon>chevron_left</mat-icon> Indicadores
+  </button>
+  <span class="title">{{title}}</span>
+</mat-toolbar>
+<mat-list role="list">
+  <ng-container *ngFor="let item of list">
+    <mat-list-item role="listitem">
+      <div class="row" style="width:100%;">
+        <div class="col-6 text-left">
+          <span class="c-blue"><strong>{{item?.Fecha}}</strong></span>
+        </div>
+        <div class="col-6 text-left">
+          <span class="list-item-title">{{currency}} {{item?.Valor}}</span>
+        </div>
+      </div>
+    </mat-list-item>
+    <mat-divider role="separator">
+    </mat-divider>
+  </ng-container>
+</mat-list>

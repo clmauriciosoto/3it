@@ -1,0 +1,9 @@
+.box-result {
+  border: 1px solid #d7e5f3;
+  text-align: right;
+  border-radius: 2px;
+  font-size: 1.5rem;
+}
+.item-result{
+  font-size: 1.5rem;
+}
