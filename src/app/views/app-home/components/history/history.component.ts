@@ -26,7 +26,8 @@ export class HistoryComponent implements OnInit, OnDestroy {
       (async () => {
         const listAccordingToIndicator: any =
           await this.common.getListAccordingToIndicator();
-        this.list = listAccordingToIndicator[this.common?.indicator?.key];
+        this.list =
+          listAccordingToIndicator[this.common?.indicator?.key].reverse();
       })();
     } else {
       this.router.navigate(['']);

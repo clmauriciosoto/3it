@@ -30,9 +30,10 @@ export class DetailComponent implements OnInit {
       (async () => {
         const listAccordingToIndicator: any =
           await this.common.getListAccordingToIndicator();
-        this.list = listAccordingToIndicator[this.common?.indicator?.key];
+        this.list =
+          listAccordingToIndicator[this.common?.indicator?.key].reverse();
 
-        const { Fecha, Valor } = this.list[this.list.length - 1];
+        const { Fecha, Valor } = this.list[0];
         this.date = Fecha;
         this.value = Valor;
         this.setChart(this.list);
@@ -55,7 +56,6 @@ export class DetailComponent implements OnInit {
         array.values = [...array.values, parseFloat(e.Valor.replace(',', '.'))];
       });
     } else {
-      list.reverse();
       for (let index = 0; index < 10; index++) {
         const e = list[index];
         array.labels = [...array.labels, e.Fecha];
@@ -65,11 +65,11 @@ export class DetailComponent implements OnInit {
     this.chart = new Chart('canvas', {
       type: 'line',
       data: {
-        labels: [...array.labels],
+        labels: [...array.labels].reverse(),
         datasets: [
           {
             label: `${this.title} - Unidad Medida (${this.format})`,
-            data: [...array.values],
+            data: [...array.values].reverse(),
             fill: false,
             borderColor: 'rgb(75, 192, 192)',
             tension: 0.1,
